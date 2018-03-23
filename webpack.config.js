@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
 	module: {
@@ -26,5 +27,6 @@ module.exports = {
 	},
 	plugins: [ new HtmlWebpackPlugin({ template: './src/index.html' }) ],
 	devtool: 'cheap-module-source-map',
-	devServer: { historyApiFallback: true }
+	devServer: { historyApiFallback: true },
+	optimization: { minimizer: [ new UglifyJsPlugin({ sourceMap: true }) ] }
 }
