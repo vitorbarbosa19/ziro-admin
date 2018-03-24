@@ -12,7 +12,7 @@ const Footer = () => (
         format='png'
         secure='true'
    	/>
-   	<span style={copy}>&copy; 2018{props.name}</span>
+   	<span style={copy}>&copy; 2018</span>
 	</div>
 )
 

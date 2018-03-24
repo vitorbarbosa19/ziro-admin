@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from './components/Navbar/index'
 import NotFound from './components/NotFound/index'
 import Footer from './components/Footer/index'
 
 export const navbar = () => (
-	<div>Navbar</div>
+	<Navbar />
 )
 
 export const content = () => (
