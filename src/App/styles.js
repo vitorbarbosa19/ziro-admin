@@ -1,4 +1,4 @@
-export const mainContainer = {
+export const main = {
 	height: '100vh',
 	display: 'grid',
 	gridTemplate: `
@@ -8,6 +8,6 @@ export const mainContainer = {
 	`
 }
 
-export const contentContainer = {
+export const content = {
 	gridArea: 'content'
 }
