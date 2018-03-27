@@ -1,12 +1,12 @@
 import React, { Fragment, Component } from 'react'
 
-export default class Login extends Component {
+export default class Dashboard extends Component {
 	handleLogin = () => netlifyIdentity.open()
 	render = () => (
 		<Fragment>
-			<div>Login</div>
+			<div>Dashboard</div>
 			<button onClick={this.handleLogin}>
-				Login
+				Logout
 			</button>
 		</Fragment>
 	)
