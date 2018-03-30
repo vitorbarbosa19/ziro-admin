@@ -6,8 +6,8 @@ import Dashboard from './components/Dashboard/index'
 import NotFound from './components/NotFound/index'
 import Footer from './components/Footer/index'
 
-export const NavbarRoute = () => (
-	<Navbar />
+export const NavbarRoute = (props) => (
+	<Navbar user={props.user} />
 )
 
 export const HomeRoute = (props) => (

@@ -2,9 +2,12 @@ import React from 'react'
 import SvgMenu from '../../icons/SvgMenu'
 import { navbar } from './styles'
 
-const Navbar = () => (
+const Navbar = (props) => (
 	<div style={navbar}>
-    <SvgMenu />
+    { props.user
+    	? <SvgMenu />
+    	: <div></div>
+    }
 	</div>
 )
 
