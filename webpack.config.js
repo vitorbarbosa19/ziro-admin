@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const development = process.env.npm_lifecycle_event === 'dev'
 
@@ -24,10 +25,6 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: ['style-loader', 'raw-loader']
-			},
-			{
-				test: /_redirects$/,
-				use: 'file-loader?name=_redirects'
 			}
 		]
 	},
@@ -36,6 +33,7 @@ module.exports = {
 	optimization: { minimizer: [ new UglifyJsPlugin({ sourceMap: true }) ] },
 	plugins: [
 		new HtmlWebpackPlugin({ template: './src/index.html' }),
+		new CopyWebpackPlugin([{ from: './_redirects', to: '_redirects', toType: 'file' }]),
 		new webpack.DefinePlugin({
 			'process.env': {
 				GRAPHQL_ENDPOINT: JSON.stringify( development ? require('./credentials').GRAPHQL_ENDPOINT : process.env.GRAPHQL_ENDPOINT)
