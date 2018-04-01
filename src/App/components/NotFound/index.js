@@ -3,7 +3,7 @@ import SvgAlert from '../../icons/SvgAlert'
 import { container, iconSize } from './styles'
 
 const NotFound = () => (
-	<div style={containeer}>
+	<div style={container}>
 		<SvgAlert width={iconSize} height={iconSize} />
 		<div>Essa página não existe. Verifique a URL digitada.</div>
 	</div>
