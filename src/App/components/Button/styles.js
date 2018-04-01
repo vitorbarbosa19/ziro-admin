@@ -7,7 +7,7 @@ export const button = {
 	border: '1px solid rgba(48,62,77,0.40)',
 	borderRadius: '30px',
 	padding: '10px 0px',
-	fontSize: window.innerWidth > 500 ? '1.5rem' : '1.4rem',
+	fontSize: '1.4rem',
 	fontWeight: '700',
 	fontFamily: 'Work Sans',
 	textTransform: 'uppercase',

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const SvgMenu = (props) => (
 	<svg
@@ -24,6 +25,13 @@ SvgMenu.defaultProps = {
   width: '24',
   height: '24',
   color: '#FFF'
+}
+
+SvgMenu.propTypes = {
+	onClick: PropTypes.func,
+	width: PropTypes.string,
+	height: PropTypes.string,
+	color: PropTypes.string
 }
 
 export default SvgMenu
