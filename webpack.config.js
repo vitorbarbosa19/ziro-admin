@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
 const development = process.env.npm_lifecycle_event === 'dev'
-const GRAPHQL_ENDPOINT = require('./credentials').GRAPHQL_ENDPOINT
 
 module.exports = {
 	module: {
@@ -35,7 +34,7 @@ module.exports = {
 		new HtmlWebpackPlugin({ template: './src/index.html' }),
 		new webpack.DefinePlugin({
 			'process.env': {
-				GRAPHQL_ENDPOINT: JSON.stringify( development ? GRAPHQL_ENDPOINT : process.env.GRAPHQL_ENDPOINT)
+				GRAPHQL_ENDPOINT: JSON.stringify( development ? require('./credentials').GRAPHQL_ENDPOINT : process.env.GRAPHQL_ENDPOINT)
 			}
 		})
 	]
