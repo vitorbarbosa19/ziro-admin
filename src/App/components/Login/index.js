@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Image } from 'cloudinary-react'
+import Button from '../Button/index'
 import { container } from './styles'
 
 export default class Login extends Component {
@@ -8,16 +9,14 @@ export default class Login extends Component {
 		<div style={container}>
 			<Image
 	        cloudName='ziro'
-	        width={window.innerWidth > 500 ? '125' : '80'}
-	        publicId='admin-login_kqdehd'
-	        version='1522375212'
+	        width={window.innerWidth > 500 ? '140' : '120'}
+	        publicId='admin-login_uodpi2'
+	        version='1522599047'
 	        format='png'
 	        secure='true'
 	   	/>
-			<div>Faça login para ter acesso ao dashboard de marcas</div>
-			<button onClick={this.handleLogin}>
-				Login
-			</button>
+			<p>Faça login para ter acesso ao dashboard de marcas</p>
+			<Button onClick={this.handleLogin} text='Login' />
 		</div>
 	)
 }
