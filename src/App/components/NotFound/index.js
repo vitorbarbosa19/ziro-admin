@@ -1,13 +1,11 @@
 import React from 'react'
 import SvgAlert from '../../icons/SvgAlert'
-import { container, message } from './styles'
-
-const iconSize = window.innerwidth > 500 ? '45' : '40'
+import { container, iconSize } from './styles'
 
 const NotFound = () => (
-	<div style={container}>
+	<div style={containeer}>
 		<SvgAlert width={iconSize} height={iconSize} />
-		<div style={message}>Essa página não existe. Verifique a URL digitada.</div>
+		<div>Essa página não existe. Verifique a URL digitada.</div>
 	</div>
 )
 

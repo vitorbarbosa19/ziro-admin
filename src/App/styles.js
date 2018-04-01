@@ -2,13 +2,14 @@ export const main = {
 	height: '100vh',
 	display: 'grid',
 	gridTemplate: `
-		'navbar' 80px
+		'navbar' ${window.innerWidth > 500 ? '80px' : '60px'}
 		'content' 1fr
-		'footer' 80px
+		'footer' ${window.innerWidth > 500 ? '80px' : '60px'}
 	`,
 	fontFamily: 'Work Sans',
-	fontSize: window.innerWidth > 500 ? '1.6rem' : '1.5rem',
-	color: 'rgba(48,62,77,0.80)'
+	fontSize: '1.6rem',
+	color: 'rgba(48,62,77,0.60)',
+	textAlign: 'center'
 }
 
 export const content = {
