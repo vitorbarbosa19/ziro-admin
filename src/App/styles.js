@@ -12,5 +12,6 @@ export const main = {
 }
 
 export const content = {
-	gridArea: 'content'
+	gridArea: 'content',
+	placeSelf: 'center'
 }
