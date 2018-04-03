@@ -1,8 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
-const development = process.env.npm_lifecycle_event === 'dev'
+const graphqlEndpoint = process.env.npm_lifecycle_event === 'dev' ? require('./credentials').GRAPHQL_ENDPOINT : process.env.GRAPHQL_ENDPOINT
 
 module.exports = {
 	module: {
@@ -34,10 +34,6 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({ template: './src/index.html' }),
 		new CopyWebpackPlugin([{ from: './_redirects', to: '_redirects', toType: 'file' }]),
-		new webpack.DefinePlugin({
-			'process.env': {
-				GRAPHQL_ENDPOINT: JSON.stringify( development ? require('./credentials').GRAPHQL_ENDPOINT : process.env.GRAPHQL_ENDPOINT)
-			}
-		})
+		new webpack.DefinePlugin({ 'process.env': { GRAPHQL_ENDPOINT: JSON.stringify(graphqlEndpoint) } })
 	]
 }

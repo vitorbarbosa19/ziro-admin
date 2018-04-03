@@ -25,5 +25,3 @@ export default class App extends Component {
 		</div>
 	)
 }
-
-//add state to track login and prevent flash of logged out state

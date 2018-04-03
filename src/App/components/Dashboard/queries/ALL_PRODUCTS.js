@@ -5,6 +5,10 @@ export default gql`
 		allProducts {
 			referencia
 			descricao
+			preco
+			grade {
+				estoque
+			}
 		}
 	}
 `
