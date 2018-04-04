@@ -23,6 +23,11 @@ input::placeholder {
 	color: rgba(48,62,77,0.50);
 }
 
+@keyframes spin {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(359.99deg) }
+}
+
 @media (max-width: 800px) {
 	html {
 		font-size: 60%;

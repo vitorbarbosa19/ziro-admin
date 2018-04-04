@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import { Query } from 'react-apollo'
 import Button from '../Button/index'
+import Spinner from '../../icons/Spinner'
 import ALL_PRODUCTS from './queries/ALL_PRODUCTS'
 
 export default class Dashboard extends Component {
@@ -8,6 +9,7 @@ export default class Dashboard extends Component {
 	render = () => (
 		<Fragment>
 			<h1>Dashboard</h1>
+			<Spinner />
 			<Button onClick={this.handleLogin} text='Logout' />
 			<Query query={ALL_PRODUCTS}>
 				{
