@@ -1,5 +1,5 @@
 import React from 'react'
-import SvgAlert from '../../icons/SvgAlert'
+import SvgAlert from '../BasicUI/SvgAlert'
 import { container, iconSize } from './styles'
 
 const NotFound = () => (

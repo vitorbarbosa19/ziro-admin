@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Image } from 'cloudinary-react'
-import Button from '../Button/index'
+import Button from '../BasicUI/Button/index'
 import { container } from './styles'
 
 export default class Login extends Component {

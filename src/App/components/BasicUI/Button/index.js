@@ -9,9 +9,9 @@ export default class Button extends Component {
 	render = () => (
 		<button
 			style={this.state.isHovered ? buttonOnHover : button}
+			onClick={this.props.onClick}
 			onMouseEnter={this.hoverIn}
 			onMouseLeave={this.hoverOut}
-			onClick={this.props.onClick}
 		>
 			{this.props.text}
 		</button>

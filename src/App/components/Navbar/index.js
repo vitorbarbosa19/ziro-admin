@@ -1,5 +1,5 @@
 import React from 'react'
-import SvgMenu from '../../icons/SvgMenu'
+import SvgMenu from '../BasicUI/SvgMenu'
 import { navbar } from './styles'
 
 const Navbar = (props) => (
