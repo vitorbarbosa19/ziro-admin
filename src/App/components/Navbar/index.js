@@ -1,11 +1,11 @@
 import React from 'react'
-import SvgMenu from '../BasicUI/SvgMenu'
+import IconMenu from '../BasicUI/IconMenu'
 import { navbar } from './styles'
 
 const Navbar = (props) => (
 	<div style={navbar}>
     { props.user
-    	? <SvgMenu />
+    	? <IconMenu />
     	: <div></div>
     }
 	</div>

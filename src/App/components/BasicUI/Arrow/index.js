@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { svg, circleOnHover, circle } from './styles'
 
-export default class SvgArrow extends Component {
+export default class Arrow extends Component {
 	state = { isHovered: false }
 	hoverIn = () => this.setState({ isHovered: true })
 	hoverOut = () => this.setState({ isHovered: false })
@@ -33,13 +33,13 @@ export default class SvgArrow extends Component {
 	)
 }
 
-SvgArrow.defaultProps = {
+Arrow.defaultProps = {
 	onClick: null,
   color: '#7F868F',
   size: '4.0rem'
 }
 
-SvgArrow.propTypes = {
+Arrow.propTypes = {
 	onClick: PropTypes.func,
 	color: PropTypes.string,
 	size: PropTypes.string

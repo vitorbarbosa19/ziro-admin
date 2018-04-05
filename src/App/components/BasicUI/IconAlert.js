@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SvgMenu = (props) => (
+const IconAlert = (props) => (
 	<svg
-		style={{ cursor: 'pointer' }}
-		onClick={props.onClick}
 		width={props.width}
 		height={props.height}
 		viewBox="0 0 24 24"
@@ -14,24 +12,22 @@ const SvgMenu = (props) => (
 		strokeLinecap="round"
 		strokeLinejoin="round"
 	>
-		<line x1="3" y1="12" x2="21" y2="12"></line>
-		<line x1="3" y1="6" x2="21" y2="6"></line>
-		<line x1="3" y1="18" x2="21" y2="18"></line>
+		<circle cx="12" cy="12" r="10"></circle>
+		<line x1="12" y1="8" x2="12" y2="12"></line>
+		<line x1="12" y1="16" x2="12" y2="16"></line>
 	</svg>
 )
 
-SvgMenu.defaultProps = {
-  onClick: null,
+IconAlert.defaultProps = {
   width: '24',
   height: '24',
-  color: '#FFF'
+  color: '#F16B6F'
 }
 
-SvgMenu.propTypes = {
-	onClick: PropTypes.func,
+IconAlert.propTypes = {
 	width: PropTypes.string,
 	height: PropTypes.string,
 	color: PropTypes.string
 }
 
-export default SvgMenu
+export default IconAlert

@@ -1,10 +1,10 @@
 import React from 'react'
-import SvgAlert from '../../icons/SvgAlert'
+import IconAlert from '../BasicUI/IconAlert'
 import { container, iconSize } from './styles'
 
 const ErrorMessage = () => (
 	<div style={container}>
-		<SvgAlert width={iconSize} height={iconSize} />
+		<IconAlert width={iconSize} height={iconSize} />
 		<div>Um erro interno ocorreu. Tente novamente mais tarde.</div>
 	</div>
 )
