@@ -1,11 +1,11 @@
 import React from 'react'
-import IconMenu from '../BasicUI/IconMenu'
+import Menu from './Menu/index'
 import { navbar } from './styles'
 
 const Navbar = (props) => (
 	<div style={navbar}>
     { props.user
-    	? <IconMenu />
+    	? <Menu />
     	: <div></div>
     }
 	</div>
