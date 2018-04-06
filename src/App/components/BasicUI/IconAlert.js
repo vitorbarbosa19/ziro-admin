@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 const IconAlert = (props) => (
 	<svg
-		width={props.width}
-		height={props.height}
+		width={props.size}
+		height={props.size}
 		viewBox="0 0 24 24"
 		fill="none"
 		stroke={props.color}
@@ -19,14 +19,12 @@ const IconAlert = (props) => (
 )
 
 IconAlert.defaultProps = {
-  width: '24',
-  height: '24',
+  size: '24',
   color: '#F16B6F'
 }
 
 IconAlert.propTypes = {
-	width: PropTypes.string,
-	height: PropTypes.string,
+	size: PropTypes.string,
 	color: PropTypes.string
 }
 

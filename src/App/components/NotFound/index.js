@@ -4,7 +4,7 @@ import { container, iconSize } from './styles'
 
 const NotFound = () => (
 	<div style={container}>
-		<IconAlert width={iconSize} height={iconSize} />
+		<IconAlert size={iconSize} />
 		<div>Essa página não existe. Verifique a URL digitada.</div>
 	</div>
 )

@@ -8,10 +8,10 @@ export const panel = {
 	zIndex: '1',
 	top: '0',
 	left: '-100px',
-	width: '350px',
+	width: window.innerWidth > 500 ? '350px' : '100%',
 	height: '100%',
 	backgroundColor: '#FFF',
-	boxShadow: `0px 3px 10px 0px rgba(48,62,77,0.10), 0px 6px 10px 0px rgba(48,62,77,0.05)`,
+	boxShadow: `3px 0px 10px 0px rgba(48,62,77,0.10), 6px 0px 10px 0px rgba(48,62,77,0.05)`,
 	pointerEvents: 'none',
 	opacity: '0',
 	transition: '0.3s ease'

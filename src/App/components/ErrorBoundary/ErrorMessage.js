@@ -4,7 +4,7 @@ import { container, iconSize } from './styles'
 
 const ErrorMessage = () => (
 	<div style={container}>
-		<IconAlert width={iconSize} height={iconSize} />
+		<IconAlert size={iconSize} />
 		<div>Um erro interno ocorreu. Tente novamente mais tarde.</div>
 	</div>
 )

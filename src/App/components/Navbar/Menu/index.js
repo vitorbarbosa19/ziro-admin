@@ -10,7 +10,7 @@ export default class Menu extends Component {
 	render = () => (
 		<div style={container}>
 			<IconMenu onClick={this.openMenu} />
-			<Panel menuIsOpen={this.state.isOpen} />
+			<Panel onClick={this.closeMenu} menuIsOpen={this.state.isOpen} />
 		</div>
 	)
 }

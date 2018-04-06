@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const IconMenu = (props) => (
+const IconClose = (props) => (
 	<svg
 		style={{ cursor: 'pointer' }}
 		onClick={props.onClick}
@@ -14,22 +14,21 @@ const IconMenu = (props) => (
 		strokeLinecap="round"
 		strokeLinejoin="round"
 	>
-		<line x1="3" y1="12" x2="21" y2="12"></line>
-		<line x1="3" y1="6" x2="21" y2="6"></line>
-		<line x1="3" y1="18" x2="21" y2="18"></line>
+		<line x1="18" y1="6" x2="6" y2="18"></line>
+		<line x1="6" y1="6" x2="18" y2="18"></line>
 	</svg>
 )
 
-IconMenu.defaultProps = {
-  onClick: null,
+IconClose.defaultProps = {
+	onClick: null,
   size: '24',
-  color: '#FFF'
+  color: 'rgba(127, 134, 143, 1)'
 }
 
-IconMenu.propTypes = {
+IconClose.propTypes = {
 	onClick: PropTypes.func,
 	size: PropTypes.string,
 	color: PropTypes.string
 }
 
-export default IconMenu
+export default IconClose
