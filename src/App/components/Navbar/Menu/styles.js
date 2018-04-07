@@ -17,9 +17,25 @@ export const panel = {
 	transition: '0.3s ease'
 }
 
-export const panelIsOpen = { ...panel,
+export const panelIsOpen = {
+	...panel,
 	pointerEvents: 'auto',
 	opacity: '1',
 	transform: 'translateX(100px)',
 	transition: '0.5s ease'
+}
+
+export const close = {
+	display: 'grid',
+	justifyContent: 'flex-end',
+	paddingRight: '10px',
+	margin: '10px 0 20px'
+}
+
+export const profile = {
+	display: 'grid',
+	gridTemplateColumns: '50%',
+	gridRowGap: '10px',
+	justifyContent: 'center',
+	justifyItems: 'center'
 }

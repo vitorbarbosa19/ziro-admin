@@ -4,10 +4,7 @@ import { navbar } from './styles'
 
 const Navbar = (props) => (
 	<div style={navbar}>
-    { props.user
-    	? <Menu />
-    	: <div></div>
-    }
+    { props.user && <Menu username={props.user.name} /> }
 	</div>
 )
 
