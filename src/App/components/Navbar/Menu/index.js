@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
+import Header from './Header'
 import Panel from './Panel'
-import IconMenu from '../../BasicUI/IconMenu'
-import { container } from './styles'
 
 export default class Menu extends Component {
 	state = { isOpen: false }
@@ -9,14 +8,16 @@ export default class Menu extends Component {
 	openMenu = () => this.setState({ isOpen: true })
 	closeMenu = () => this.setState({ isOpen: false })
 	render = () => (
-		<div style={container}>
-			<IconMenu onClick={this.openMenu} />
+		<Fragment>
+			<Header
+				onClick={this.openMenu}
+				pathname={this.props.location.pathname} />
 			<Panel
 				handleLogin={this.handleLogin}
 				onClick={this.closeMenu}
 				menuIsOpen={this.state.isOpen}
-				username={this.props.username}
+				username={this.props.user.name}
 			/>
-		</div>
+		</Fragment>
 	)
 }

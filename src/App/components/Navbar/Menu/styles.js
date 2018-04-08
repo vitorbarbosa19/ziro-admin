@@ -1,6 +1,14 @@
 export const container = {
+	display: 'grid',
+	gridTemplate: '1fr / 60px 1fr',
+	placeItems: 'center'
+}
+
+export const header = {
 	display: 'flex',
-	paddingLeft: '20px'
+	alignItems: 'center',
+	marginLeft: '-60px',
+	color: '#FFF',
 }
 
 export const panel = {

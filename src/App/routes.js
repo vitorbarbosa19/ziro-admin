@@ -7,7 +7,7 @@ import NotFound from './components/NotFound/index'
 import Footer from './components/Footer/index'
 
 export const NavbarRoute = (props) => (
-	<Navbar user={props.user} />
+	<Navbar {...props} />
 )
 
 export const HomeRoute = (props) => (

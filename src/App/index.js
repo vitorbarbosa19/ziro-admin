@@ -11,7 +11,7 @@ export default class App extends Component {
 	render = () => (
 		<div style={main}>
 			<ErrorBoundary>
-				<Route render={() => <NavbarRoute user={this.state.user} />} />
+				<Route render={(props) => <NavbarRoute {...props} user={this.state.user} />} />
 				<div style={content}>
 					<Switch>
 						<Route exact path='/' render={() => <HomeRoute user={this.state.user} />} />
