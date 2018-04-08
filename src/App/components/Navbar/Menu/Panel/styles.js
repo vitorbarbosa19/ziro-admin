@@ -1,16 +1,3 @@
-export const container = {
-	display: 'grid',
-	gridTemplate: '1fr / 60px 1fr',
-	placeItems: 'center'
-}
-
-export const header = {
-	display: 'flex',
-	alignItems: 'center',
-	marginLeft: '-60px',
-	color: '#FFF',
-}
-
 export const panel = {
 	position: 'fixed',
 	zIndex: '1',

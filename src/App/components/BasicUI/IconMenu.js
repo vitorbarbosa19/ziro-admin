@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const IconMenu = (props) => (
+const IconMenu = ({ size, color, onClick }) => (
 	<svg
 		style={{ cursor: 'pointer' }}
-		onClick={props.onClick}
-		width={props.size}
-		height={props.size}
+		onClick={onClick}
+		width={size}
+		height={size}
 		viewBox="0 0 24 24"
 		fill="none"
-		stroke={props.color}
+		stroke={color}
 		strokeWidth="2"
 		strokeLinecap="round"
 		strokeLinejoin="round"

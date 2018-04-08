@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const IconChevron = (props) => (
+const IconChevron = ({ size, color }) => (
 	<svg
-		width={props.size}
-		height={props.size}
+		width={size}
+		height={size}
 		viewBox="0 0 24 24"
 		fill="none"
-		stroke={props.color}
+		stroke={color}
 		strokeWidth="2"
 		strokeLinecap="round"
 		strokeLinejoin="round"

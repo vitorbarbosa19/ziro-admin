@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { svg } from './styles'
 
-const Spinner = (props) => (
+const Spinner = ({ size }) => (
 	<svg
 		style={svg}
-		width={props.size}
-		height={props.size}
+		width={size}
+		height={size}
 		viewBox="0 0 24 24"
 		strokeWidth="2"
 		strokeLinecap="round"

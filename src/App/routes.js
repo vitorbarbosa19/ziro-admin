@@ -10,25 +10,22 @@ export const NavbarRoute = (props) => (
 	<Navbar {...props} />
 )
 
-export const HomeRoute = (props) => (
-	props.user ?
-		<Redirect to='/dashboard' />
-	: 
-		<Redirect to='/login' />
+export const HomeRoute = ({ user }) => (
+	user
+	? <Redirect to='/dashboard' />
+	: <Redirect to='/login' />
 )
 
-export const LoginRoute = (props) => (
-	props.user ?
-		<Redirect to='/dashboard' />
-	:
-		<Login user={props.user} />
+export const LoginRoute = ({ user }) => (
+	user
+	? <Redirect to='/dashboard' />
+	: <Login user={user} />
 )
 
-export const DashboardRoute = (props) => (
-	props.user ?
-		<Dashboard user={props.user} />
-	:
-		<Redirect to='/login' />
+export const DashboardRoute = ({ user }) => (
+	user
+	? <Dashboard user={user} />
+	: <Redirect to='/login' />
 )
 
 export const NotFoundRoute = () => (
