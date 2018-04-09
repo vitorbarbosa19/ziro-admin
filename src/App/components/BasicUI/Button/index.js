@@ -6,16 +6,19 @@ export default class Button extends Component {
 	state = { isHovered: false }
 	hoverIn = () => this.setState({ isHovered: true })
 	hoverOut = () => this.setState({ isHovered: false })
-	render = () => (
-		<button
-			style={this.state.isHovered ? buttonOnHover : button}
-			onClick={this.props.onClick}
-			onMouseEnter={this.hoverIn}
-			onMouseLeave={this.hoverOut}
-		>
-			{this.props.text}
-		</button>
-	)
+	render = () => {
+		const { onClick, text } = this.props
+		return (
+			<button
+				style={this.state.isHovered ? buttonOnHover : button}
+				onClick={onClick}
+				onMouseEnter={this.hoverIn}
+				onMouseLeave={this.hoverOut}
+			>
+				{text}
+			</button>
+		)
+	}
 }
 
 Button.defaultProps = {

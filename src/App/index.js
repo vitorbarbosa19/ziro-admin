@@ -7,21 +7,24 @@ import { main, content } from './styles'
 
 export default class App extends Component {
 	state = { user: null }
-	componentDidMount = () => { handleAuthentication(this) }
-	render = () => (
-		<div style={main}>
-			<ErrorBoundary>
-				<Route render={(props) => <NavbarRoute {...props} user={this.state.user} />} />
-				<div style={content}>
-					<Switch>
-						<Route exact path='/' render={() => <HomeRoute user={this.state.user} />} />
-						<Route path='/login' render={() => <LoginRoute user={this.state.user} />} />
-						<Route path='/dashboard' render={() => <DashboardRoute user={this.state.user} />} />
-						<Route render={NotFoundRoute} />
-					</Switch>
-				</div>
-				<Route render={FooterRoute} />
-			</ErrorBoundary>
-		</div>
-	)
+	componentDidMount = () => handleAuthentication(this)
+	render = () => {
+		const user = this.state.user
+		return (
+			<div style={main}>
+				<ErrorBoundary>
+					<Route render={(props) => <NavbarRoute {...props} user={user} />} />
+					<div style={content}>
+						<Switch>
+							<Route exact path='/' render={() => <HomeRoute user={user} />} />
+							<Route path='/login' render={() => <LoginRoute user={user} />} />
+							<Route path='/dashboard' render={() => <DashboardRoute user={user} />} />
+							<Route render={NotFoundRoute} />
+						</Switch>
+					</div>
+					<Route render={FooterRoute} />
+				</ErrorBoundary>
+			</div>
+		)
+	}
 }

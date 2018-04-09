@@ -7,8 +7,7 @@ import ALL_PRODUCTS from './queries/ALL_PRODUCTS'
 export default class Dashboard extends Component {
 	render = () => (
 		<Query query={ALL_PRODUCTS}>
-			{
-				({ loading, error, data: { allProducts } }) => {
+			{({ loading, error, data: { allProducts } }) => {
 					console.log(allProducts)
 					if (loading)
 						return <div><Spinner /><p>Carregando marcas...</p></div>
@@ -17,8 +16,7 @@ export default class Dashboard extends Component {
 					return allProducts.map( ({ referencia, descricao, preco }) => (
 						<div key={referencia}>{referencia} | {descricao} | {preco}</div>
 					))
-				}
-			}
+			}}
 		</Query>
 	)
 }
