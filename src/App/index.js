@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import handleAuthentication from './functions/handleAuthentication'
-import { NavbarRoute, HomeRoute, LoginRoute, DashboardRoute, NotFoundRoute, FooterRoute } from './routes'
+import { NavbarRoute, HomeRoute, DashboardRoute, BrandRoute,
+				 LoginRoute, NotFoundRoute, FooterRoute } from './routes'
 import ErrorBoundary from './components/ErrorBoundary/index'
 import { main, content } from './styles'
 
@@ -17,8 +18,9 @@ export default class App extends Component {
 					<div style={content}>
 						<Switch>
 							<Route exact path='/' render={() => <HomeRoute user={user} />} />
+							<Route exact path='/dashboard' render={() => <DashboardRoute user={user} />} />
+							<Route path='/dashboard/:brand' render={(props) => <BrandRoute {...props} user={user} />} />
 							<Route path='/login' render={() => <LoginRoute user={user} />} />
-							<Route path='/dashboard' render={() => <DashboardRoute user={user} />} />
 							<Route render={NotFoundRoute} />
 						</Switch>
 					</div>
